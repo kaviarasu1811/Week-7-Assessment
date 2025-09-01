@@ -1,0 +1,12 @@
+stages: [job1, job2]
+
+job1:
+  stage: job1
+  script:
+    - echo "job1 started"
+
+job2:
+  stage: job2
+  needs: ["job1"]
+  script:
+    - echo "job2 started"
